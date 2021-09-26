@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 const date = require(__dirname + "/date.js");
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.use(function (req, res, next) {
   if (req.originalUrl && req.originalUrl.split("/").pop() === "favicon.ico") {
